@@ -1,3 +1,4 @@
+
 namespace unidad_3_costos
 {
     public partial class Form1 : Form
@@ -31,6 +32,8 @@ namespace unidad_3_costos
 
         //Variables Iguaales
         private float ProduccionEquiMat4, ProduccionEquiObr5, ProduccionEquiGFab6, ProduccionProMat1, ProduccionProObr2, ProduccionProGFab3, CostoUniMat1, CostoUniObr2, CostoUniGFab3, ProduccionEquiMat1, ProduccionEquiObr2, ProduccionEquiGFab3;
+        //Vriable de Total tabla 4 C
+        float Total10, Total11, Total12;
 
         //Variable Tabla 2
         //Variables Costos Unitarios
@@ -51,6 +54,8 @@ namespace unidad_3_costos
         private DataGridView dataGridViewProducionTerminada = new DataGridView();
 
         private Dictionary<string, int> valoresCeldas = new Dictionary<string, int>();
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -383,13 +388,13 @@ namespace unidad_3_costos
 
             //Tabla 2
             //Materiales Total Costo
-            float Total1 = MatInvInicial2 * MatCostoIncu2;
+            float Total1 = MatInvInicial2 + MatCostoIncu2;
             dataGridViewCostoUni.Rows[0].Cells[3].Value = Total1;
             //Mano Obraa Total Costo
-            float Total2 = ManoObrInvInicial2 * ManoObrCostoIncu2;
+            float Total2 = ManoObrInvInicial2 + ManoObrCostoIncu2;
             dataGridViewCostoUni.Rows[1].Cells[3].Value = Total2;
             //G.Fabricacion Total Costo
-            float Total3 = GFabriacionInvInicial2 * GFabriacionCostoIncu2;
+            float Total3 = GFabriacionInvInicial2 + GFabriacionCostoIncu2;
             dataGridViewCostoUni.Rows[2].Cells[3].Value = Total3;
             //Suma total
             float SumaTotal1 = Total1 + Total2 + Total3;
@@ -472,14 +477,14 @@ namespace unidad_3_costos
             //Costo Unitario Promedio G.Fabricaciom
             dataGridViewProducionTerminada.Rows[2].Cells[2].Value = CostoUniGFab3;
 
-            //Produccion Terminada Materiales
-            float Total10 = MatProTer1 * CostoUniMat1;
+            //Produccion Total Terminada Materiales
+            Total10 = MatProTer1 * CostoUniMat1;
             dataGridViewProducionTerminada.Rows[0].Cells[3].Value = Total10;
             //Produccion Terminada Materiales
-            float Total11 = ManoObr1 * CostoUniObr2;
+            Total11 = ManoObr1 * CostoUniObr2;
             dataGridViewProducionTerminada.Rows[1].Cells[3].Value = Total11;
             //Produccion Terminada Materiales
-            float Total12 = GFabriacion1 * CostoUniGFab3;
+            Total12 = GFabriacion1 * CostoUniGFab3;
             dataGridViewProducionTerminada.Rows[2].Cells[3].Value = Total12;
             float SumaTotal3 = Total10 + Total11 + Total12;
             dataGridViewProducionTerminada.Rows[3].Cells[3].Value = SumaTotal3;
@@ -494,6 +499,48 @@ namespace unidad_3_costos
             tabControl1.TabPages[3].Controls.Add(dataGridViewProducionTerminada);
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            //Suma Total 
+            lblMatPriDirecTotal.Text = Total10.ToString();
+            lblManoObrTotal.Text = Total11.ToString();
+            lblCargosIndireTotal.Text = Total12.ToString();
+            lblCostoPrimoTotal.Text = (Total10 + Total11).ToString();
+            lblCargosIndireTotal.Text = Total12.ToString();
+            lblCostoProduccionTotal.Text = ((Total10 + Total11) + (Total12)).ToString();
+
+            //Suma Unidad
+            lblMatPriDirecUnitario.Text = CostoUniMat1.ToString();
+            lblManoObraDirecUnitario.Text = CostoUniObr2.ToString();
+            lblCostoPrimoUnitario.Text = (CostoUniMat1 + CostoUniObr2).ToString();
+            lblCargosIndireUnitario.Text = CostoUniGFab3.ToString();
+            lblCostoProduccionUnitario.Text = ((CostoUniMat1 + CostoUniObr2) + (CostoUniGFab3)).ToString();
+
+            string Recibo = $"{lblTitulo.Text}\n{lblSubTitulo.Text} \n\n {"Cliente:" + txtCliente.Text + "                "} {"Fecha de Pedido: " + dtpFechaPedido.Text + "    "}\n\n {"Producto:" + txtProducto.Text + "                "} {"Fecha de Expedicion" + dtpFechaExpedicion.Text}\n\n {"Espesificaiones:" + txtEspesificaciones.Text + "                "} {"Fecha de Iniciacion" + dtpFechaIniciacion.Text}\n\n {"Cantidad:" + txtCantidad.Text + "                "} {"Fecha Descargada de Entrega" + dtpFechaDescarga.Text}\n\n {"Unidad:" + txtUnidad.Text + "                "} {"Fecha de Terminacion" + dtpFechaTerminacion.Text}\n\n {"Concepto" + "                "} {"Total" + "           " + "Unitario" + "    "}\n\n {"Materia Prima Directa:" + "                "} {lblMatPriDirecTotal.Text + "           " + lblMatPriDirecUnitario.Text + "    "}\n\n {"Mano de Obra Directa:" + "                "} {lblMatPriDirecTotal.Text + "           " + lblMatPriDirecUnitario.Text + "    "}\n\n {"Costo Primo:" + "                "} {lblCostoPrimoTotal.Text + "           " + lblCostoPrimoUnitario.Text + "    "}\n\n {"Cargos Indirectos:" + "                "} {lblCargosIndireTotal.Text + "           " + lblCargosIndireUnitario.Text + "    "}\n\n {"Costo de Producción:" + "                "} {lblCostoProduccionTotal.Text + "           " + lblCostoProduccionUnitario.Text + "    "} \n\n{lblExpedida.Text + "        " + txtExpedida.Text + "        " + lblCalculada.Text + "        " + txtCalculada.Text + "        " + lblContabilizada.Text + "        " + txtContabilizada.Text}   ";
+            string escritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            // Crear la ruta completa del archivo
+            string rutaArchivo = Path.Combine(escritorio, "informacion.txt");
+            GuardarEnArchivo(rutaArchivo, Recibo);
+        }
+        private void GuardarEnArchivo(string ruta, string informacion)
+        {
+            try
+            {
+                // Escribe la información en el archivo
+                using (StreamWriter sw = new StreamWriter(ruta, true))
+                {
+                    sw.WriteLine(informacion);
+                }
+
+                MessageBox.Show("Información guardada correctamente en el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar la información: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -513,13 +560,17 @@ namespace unidad_3_costos
         {
 
         }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void label23_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaTerminacion_ValueChanged(object sender, EventArgs e)
         {
 
         }

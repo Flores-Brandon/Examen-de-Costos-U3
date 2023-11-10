@@ -33,27 +33,35 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            tabPage5 = new TabPage();
+            tpRecibo = new TabPage();
+            txtContabilizada = new TextBox();
+            lblContabilizada = new Label();
+            txtCalculada = new TextBox();
+            lblCalculada = new Label();
+            txtExpedida = new TextBox();
+            lblExpedida = new Label();
+            lblCostoPrimoTotal = new Label();
+            lblManoObrTotal = new Label();
             btnImprimir = new Button();
             lblCostoProduccionUnitario = new Label();
             lblCargosIndireUnitario = new Label();
-            lblCostoPrimoUnitarioUnitario = new Label();
+            lblCostoPrimoUnitario = new Label();
             lblManoObraDirecUnitario = new Label();
             lblMatPriDirecUnitario = new Label();
             lblCostoProduccionTotal = new Label();
             lblCargosIndireTotal = new Label();
             lblMatPriDirecTotal = new Label();
-            label22 = new Label();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label17 = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
+            lblUnitario = new Label();
+            lblTotal = new Label();
+            lblCosto = new Label();
+            lblCostodeProduccion = new Label();
+            lblCargosIndirectos = new Label();
+            lblCostopri = new Label();
+            lblManodeObraDirecta = new Label();
+            lblMateriaPrimaDirecta = new Label();
+            lblConcepto = new Label();
+            lblSubTitulo = new Label();
+            lblTitulo = new Label();
             dtpFechaTerminacion = new DateTimePicker();
             dtpFechaIniciacion = new DateTimePicker();
             dtpFechaExpedicion = new DateTimePicker();
@@ -64,21 +72,19 @@
             txtEspesificaciones = new TextBox();
             txtProducto = new TextBox();
             txtCliente = new TextBox();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
+            lblFechaTermincion = new Label();
+            lblFechaDescargaEntrega = new Label();
+            lblFechaIniciacion = new Label();
+            lblFechaExpedicion = new Label();
+            lblFechaPedido = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             btnOperaciones = new Button();
-            lblManoObrTotal = new Label();
-            lblCostoPrimo = new Label();
             tabControl1.SuspendLayout();
-            tabPage5.SuspendLayout();
+            tpRecibo.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -87,7 +93,7 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
-            tabControl1.Controls.Add(tabPage5);
+            tabControl1.Controls.Add(tpRecibo);
             tabControl1.Location = new Point(0, 0);
             tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
@@ -97,8 +103,8 @@
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = SystemColors.ButtonFace;
-            tabPage1.ForeColor = Color.White;
+            tabPage1.BackColor = Color.Transparent;
+            tabPage1.ForeColor = Color.Black;
             tabPage1.Location = new Point(4, 24);
             tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
@@ -139,59 +145,134 @@
             tabPage4.Text = "Valuacion de Producción Terminada";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // tpRecibo
             // 
-            tabPage5.Controls.Add(lblCostoPrimo);
-            tabPage5.Controls.Add(lblManoObrTotal);
-            tabPage5.Controls.Add(btnImprimir);
-            tabPage5.Controls.Add(lblCostoProduccionUnitario);
-            tabPage5.Controls.Add(lblCargosIndireUnitario);
-            tabPage5.Controls.Add(lblCostoPrimoUnitarioUnitario);
-            tabPage5.Controls.Add(lblManoObraDirecUnitario);
-            tabPage5.Controls.Add(lblMatPriDirecUnitario);
-            tabPage5.Controls.Add(lblCostoProduccionTotal);
-            tabPage5.Controls.Add(lblCargosIndireTotal);
-            tabPage5.Controls.Add(lblMatPriDirecTotal);
-            tabPage5.Controls.Add(label22);
-            tabPage5.Controls.Add(label21);
-            tabPage5.Controls.Add(label20);
-            tabPage5.Controls.Add(label19);
-            tabPage5.Controls.Add(label17);
-            tabPage5.Controls.Add(label16);
-            tabPage5.Controls.Add(label15);
-            tabPage5.Controls.Add(label14);
-            tabPage5.Controls.Add(label13);
-            tabPage5.Controls.Add(label12);
-            tabPage5.Controls.Add(label11);
-            tabPage5.Controls.Add(dtpFechaTerminacion);
-            tabPage5.Controls.Add(dtpFechaIniciacion);
-            tabPage5.Controls.Add(dtpFechaExpedicion);
-            tabPage5.Controls.Add(dtpFechaDescarga);
-            tabPage5.Controls.Add(dtpFechaPedido);
-            tabPage5.Controls.Add(txtUnidad);
-            tabPage5.Controls.Add(txtCantidad);
-            tabPage5.Controls.Add(txtEspesificaciones);
-            tabPage5.Controls.Add(txtProducto);
-            tabPage5.Controls.Add(txtCliente);
-            tabPage5.Controls.Add(label10);
-            tabPage5.Controls.Add(label9);
-            tabPage5.Controls.Add(label8);
-            tabPage5.Controls.Add(label7);
-            tabPage5.Controls.Add(label6);
-            tabPage5.Controls.Add(label5);
-            tabPage5.Controls.Add(label4);
-            tabPage5.Controls.Add(label3);
-            tabPage5.Controls.Add(label2);
-            tabPage5.Controls.Add(label1);
-            tabPage5.Location = new Point(4, 24);
-            tabPage5.Margin = new Padding(3, 2, 3, 2);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3, 2, 3, 2);
-            tabPage5.Size = new Size(1507, 679);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Recibo";
-            tabPage5.UseVisualStyleBackColor = true;
-            tabPage5.Click += tabPage5_Click;
+            tpRecibo.Controls.Add(txtContabilizada);
+            tpRecibo.Controls.Add(lblContabilizada);
+            tpRecibo.Controls.Add(txtCalculada);
+            tpRecibo.Controls.Add(lblCalculada);
+            tpRecibo.Controls.Add(txtExpedida);
+            tpRecibo.Controls.Add(lblExpedida);
+            tpRecibo.Controls.Add(lblCostoPrimoTotal);
+            tpRecibo.Controls.Add(lblManoObrTotal);
+            tpRecibo.Controls.Add(btnImprimir);
+            tpRecibo.Controls.Add(lblCostoProduccionUnitario);
+            tpRecibo.Controls.Add(lblCargosIndireUnitario);
+            tpRecibo.Controls.Add(lblCostoPrimoUnitario);
+            tpRecibo.Controls.Add(lblManoObraDirecUnitario);
+            tpRecibo.Controls.Add(lblMatPriDirecUnitario);
+            tpRecibo.Controls.Add(lblCostoProduccionTotal);
+            tpRecibo.Controls.Add(lblCargosIndireTotal);
+            tpRecibo.Controls.Add(lblMatPriDirecTotal);
+            tpRecibo.Controls.Add(lblUnitario);
+            tpRecibo.Controls.Add(lblTotal);
+            tpRecibo.Controls.Add(lblCosto);
+            tpRecibo.Controls.Add(lblCostodeProduccion);
+            tpRecibo.Controls.Add(lblCargosIndirectos);
+            tpRecibo.Controls.Add(lblCostopri);
+            tpRecibo.Controls.Add(lblManodeObraDirecta);
+            tpRecibo.Controls.Add(lblMateriaPrimaDirecta);
+            tpRecibo.Controls.Add(lblConcepto);
+            tpRecibo.Controls.Add(lblSubTitulo);
+            tpRecibo.Controls.Add(lblTitulo);
+            tpRecibo.Controls.Add(dtpFechaTerminacion);
+            tpRecibo.Controls.Add(dtpFechaIniciacion);
+            tpRecibo.Controls.Add(dtpFechaExpedicion);
+            tpRecibo.Controls.Add(dtpFechaDescarga);
+            tpRecibo.Controls.Add(dtpFechaPedido);
+            tpRecibo.Controls.Add(txtUnidad);
+            tpRecibo.Controls.Add(txtCantidad);
+            tpRecibo.Controls.Add(txtEspesificaciones);
+            tpRecibo.Controls.Add(txtProducto);
+            tpRecibo.Controls.Add(txtCliente);
+            tpRecibo.Controls.Add(lblFechaTermincion);
+            tpRecibo.Controls.Add(lblFechaDescargaEntrega);
+            tpRecibo.Controls.Add(lblFechaIniciacion);
+            tpRecibo.Controls.Add(lblFechaExpedicion);
+            tpRecibo.Controls.Add(lblFechaPedido);
+            tpRecibo.Controls.Add(label5);
+            tpRecibo.Controls.Add(label4);
+            tpRecibo.Controls.Add(label3);
+            tpRecibo.Controls.Add(label2);
+            tpRecibo.Controls.Add(label1);
+            tpRecibo.Location = new Point(4, 24);
+            tpRecibo.Margin = new Padding(3, 2, 3, 2);
+            tpRecibo.Name = "tpRecibo";
+            tpRecibo.Padding = new Padding(3, 2, 3, 2);
+            tpRecibo.Size = new Size(1507, 679);
+            tpRecibo.TabIndex = 4;
+            tpRecibo.Text = "Recibo";
+            tpRecibo.UseVisualStyleBackColor = true;
+            tpRecibo.Click += tabPage5_Click;
+            // 
+            // txtContabilizada
+            // 
+            txtContabilizada.Location = new Point(1070, 648);
+            txtContabilizada.Margin = new Padding(3, 2, 3, 2);
+            txtContabilizada.Name = "txtContabilizada";
+            txtContabilizada.Size = new Size(252, 23);
+            txtContabilizada.TabIndex = 48;
+            // 
+            // lblContabilizada
+            // 
+            lblContabilizada.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblContabilizada.Location = new Point(902, 643);
+            lblContabilizada.Name = "lblContabilizada";
+            lblContabilizada.Size = new Size(162, 32);
+            lblContabilizada.TabIndex = 47;
+            lblContabilizada.Text = "Contabilizada Por:";
+            lblContabilizada.Click += label24_Click;
+            // 
+            // txtCalculada
+            // 
+            txtCalculada.Location = new Point(619, 648);
+            txtCalculada.Margin = new Padding(3, 2, 3, 2);
+            txtCalculada.Name = "txtCalculada";
+            txtCalculada.Size = new Size(252, 23);
+            txtCalculada.TabIndex = 46;
+            // 
+            // lblCalculada
+            // 
+            lblCalculada.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCalculada.Location = new Point(473, 645);
+            lblCalculada.Name = "lblCalculada";
+            lblCalculada.Size = new Size(140, 32);
+            lblCalculada.TabIndex = 45;
+            lblCalculada.Text = "Calculada Por:";
+            // 
+            // txtExpedida
+            // 
+            txtExpedida.Location = new Point(154, 648);
+            txtExpedida.Margin = new Padding(3, 2, 3, 2);
+            txtExpedida.Name = "txtExpedida";
+            txtExpedida.Size = new Size(252, 23);
+            txtExpedida.TabIndex = 44;
+            // 
+            // lblExpedida
+            // 
+            lblExpedida.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblExpedida.Location = new Point(8, 645);
+            lblExpedida.Name = "lblExpedida";
+            lblExpedida.Size = new Size(140, 32);
+            lblExpedida.TabIndex = 43;
+            lblExpedida.Text = "Expedida Por:";
+            // 
+            // lblCostoPrimoTotal
+            // 
+            lblCostoPrimoTotal.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCostoPrimoTotal.Location = new Point(696, 419);
+            lblCostoPrimoTotal.Name = "lblCostoPrimoTotal";
+            lblCostoPrimoTotal.Size = new Size(106, 32);
+            lblCostoPrimoTotal.TabIndex = 42;
+            lblCostoPrimoTotal.Click += label23_Click;
+            // 
+            // lblManoObrTotal
+            // 
+            lblManoObrTotal.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblManoObrTotal.Location = new Point(696, 387);
+            lblManoObrTotal.Name = "lblManoObrTotal";
+            lblManoObrTotal.Size = new Size(106, 32);
+            lblManoObrTotal.TabIndex = 41;
             // 
             // btnImprimir
             // 
@@ -220,13 +301,13 @@
             lblCargosIndireUnitario.Size = new Size(106, 32);
             lblCargosIndireUnitario.TabIndex = 39;
             // 
-            // lblCostoPrimoUnitarioUnitario
+            // lblCostoPrimoUnitario
             // 
-            lblCostoPrimoUnitarioUnitario.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCostoPrimoUnitarioUnitario.Location = new Point(1145, 419);
-            lblCostoPrimoUnitarioUnitario.Name = "lblCostoPrimoUnitarioUnitario";
-            lblCostoPrimoUnitarioUnitario.Size = new Size(106, 32);
-            lblCostoPrimoUnitarioUnitario.TabIndex = 38;
+            lblCostoPrimoUnitario.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCostoPrimoUnitario.Location = new Point(1145, 419);
+            lblCostoPrimoUnitario.Name = "lblCostoPrimoUnitario";
+            lblCostoPrimoUnitario.Size = new Size(106, 32);
+            lblCostoPrimoUnitario.TabIndex = 38;
             // 
             // lblManoObraDirecUnitario
             // 
@@ -268,113 +349,114 @@
             lblMatPriDirecTotal.Size = new Size(106, 32);
             lblMatPriDirecTotal.TabIndex = 31;
             // 
-            // label22
+            // lblUnitario
             // 
-            label22.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(1145, 323);
-            label22.Name = "label22";
-            label22.Size = new Size(106, 32);
-            label22.TabIndex = 30;
-            label22.Text = "Unitario";
+            lblUnitario.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUnitario.Location = new Point(1145, 323);
+            lblUnitario.Name = "lblUnitario";
+            lblUnitario.Size = new Size(106, 32);
+            lblUnitario.TabIndex = 30;
+            lblUnitario.Text = "Unitario";
             // 
-            // label21
+            // lblTotal
             // 
-            label21.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label21.Location = new Point(700, 323);
-            label21.Name = "label21";
-            label21.Size = new Size(106, 32);
-            label21.TabIndex = 29;
-            label21.Text = "Total";
+            lblTotal.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTotal.Location = new Point(700, 323);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(106, 32);
+            lblTotal.TabIndex = 29;
+            lblTotal.Text = "Total";
             // 
-            // label20
+            // lblCosto
             // 
-            label20.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(901, 283);
-            label20.Name = "label20";
-            label20.Size = new Size(106, 32);
-            label20.TabIndex = 28;
-            label20.Text = "Costo";
+            lblCosto.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCosto.Location = new Point(901, 283);
+            lblCosto.Name = "lblCosto";
+            lblCosto.Size = new Size(106, 32);
+            lblCosto.TabIndex = 28;
+            lblCosto.Text = "Costo";
             // 
-            // label19
+            // lblCostodeProduccion
             // 
-            label19.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(67, 494);
-            label19.Name = "label19";
-            label19.Size = new Size(197, 32);
-            label19.TabIndex = 27;
-            label19.Text = "Costo de Producción";
+            lblCostodeProduccion.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCostodeProduccion.Location = new Point(67, 494);
+            lblCostodeProduccion.Name = "lblCostodeProduccion";
+            lblCostodeProduccion.Size = new Size(197, 32);
+            lblCostodeProduccion.TabIndex = 27;
+            lblCostodeProduccion.Text = "Costo de Producción";
             // 
-            // label17
+            // lblCargosIndirectos
             // 
-            label17.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(67, 462);
-            label17.Name = "label17";
-            label17.Size = new Size(197, 32);
-            label17.TabIndex = 25;
-            label17.Text = "Cargos Indirectos";
+            lblCargosIndirectos.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCargosIndirectos.Location = new Point(67, 462);
+            lblCargosIndirectos.Name = "lblCargosIndirectos";
+            lblCargosIndirectos.Size = new Size(197, 32);
+            lblCargosIndirectos.TabIndex = 25;
+            lblCargosIndirectos.Text = "Cargos Indirectos";
             // 
-            // label16
+            // lblCostopri
             // 
-            label16.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(67, 430);
-            label16.Name = "label16";
-            label16.Size = new Size(197, 32);
-            label16.TabIndex = 24;
-            label16.Text = "Costo Primo";
+            lblCostopri.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCostopri.Location = new Point(67, 430);
+            lblCostopri.Name = "lblCostopri";
+            lblCostopri.Size = new Size(197, 32);
+            lblCostopri.TabIndex = 24;
+            lblCostopri.Text = "Costo Primo";
             // 
-            // label15
+            // lblManodeObraDirecta
             // 
-            label15.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(67, 398);
-            label15.Name = "label15";
-            label15.Size = new Size(197, 32);
-            label15.TabIndex = 23;
-            label15.Text = "Mano de Obra Directa";
+            lblManodeObraDirecta.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblManodeObraDirecta.Location = new Point(67, 398);
+            lblManodeObraDirecta.Name = "lblManodeObraDirecta";
+            lblManodeObraDirecta.Size = new Size(197, 32);
+            lblManodeObraDirecta.TabIndex = 23;
+            lblManodeObraDirecta.Text = "Mano de Obra Directa";
             // 
-            // label14
+            // lblMateriaPrimaDirecta
             // 
-            label14.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(67, 366);
-            label14.Name = "label14";
-            label14.Size = new Size(197, 32);
-            label14.TabIndex = 22;
-            label14.Text = "Materia Prima Directa";
+            lblMateriaPrimaDirecta.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMateriaPrimaDirecta.Location = new Point(67, 366);
+            lblMateriaPrimaDirecta.Name = "lblMateriaPrimaDirecta";
+            lblMateriaPrimaDirecta.Size = new Size(197, 32);
+            lblMateriaPrimaDirecta.TabIndex = 22;
+            lblMateriaPrimaDirecta.Text = "Materia Prima Directa";
             // 
-            // label13
+            // lblConcepto
             // 
-            label13.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(114, 334);
-            label13.Name = "label13";
-            label13.Size = new Size(106, 32);
-            label13.TabIndex = 21;
-            label13.Text = "Concepto";
+            lblConcepto.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblConcepto.Location = new Point(114, 334);
+            lblConcepto.Name = "lblConcepto";
+            lblConcepto.Size = new Size(106, 32);
+            lblConcepto.TabIndex = 21;
+            lblConcepto.Text = "Concepto";
             // 
-            // label12
+            // lblSubTitulo
             // 
-            label12.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(546, 46);
-            label12.Name = "label12";
-            label12.Size = new Size(269, 31);
-            label12.TabIndex = 20;
-            label12.Text = "Orden de Produccion\r\n";
-            label12.Click += label12_Click;
+            lblSubTitulo.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSubTitulo.Location = new Point(546, 46);
+            lblSubTitulo.Name = "lblSubTitulo";
+            lblSubTitulo.Size = new Size(269, 31);
+            lblSubTitulo.TabIndex = 20;
+            lblSubTitulo.Text = "Orden de Produccion\r\n";
+            lblSubTitulo.Click += label12_Click;
             // 
-            // label11
+            // lblTitulo
             // 
-            label11.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(560, 12);
-            label11.Name = "label11";
-            label11.Size = new Size(275, 31);
-            label11.TabIndex = 19;
-            label11.Text = "ALESCA, S.A";
+            lblTitulo.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitulo.Location = new Point(560, 12);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(275, 31);
+            lblTitulo.TabIndex = 19;
+            lblTitulo.Text = "ALESCA, S.A";
             // 
             // dtpFechaTerminacion
             // 
-            dtpFechaTerminacion.Location = new Point(1032, 253);
+            dtpFechaTerminacion.Location = new Point(1032, 241);
             dtpFechaTerminacion.Margin = new Padding(3, 2, 3, 2);
             dtpFechaTerminacion.Name = "dtpFechaTerminacion";
             dtpFechaTerminacion.Size = new Size(219, 23);
             dtpFechaTerminacion.TabIndex = 18;
+            dtpFechaTerminacion.ValueChanged += dtpFechaTerminacion_ValueChanged;
             // 
             // dtpFechaIniciacion
             // 
@@ -449,50 +531,50 @@
             txtCliente.Size = new Size(299, 23);
             txtCliente.TabIndex = 10;
             // 
-            // label10
+            // lblFechaTermincion
             // 
-            label10.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(696, 244);
-            label10.Name = "label10";
-            label10.Size = new Size(285, 39);
-            label10.TabIndex = 9;
-            label10.Text = "Fecha de Terminacion ";
+            lblFechaTermincion.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFechaTermincion.Location = new Point(696, 244);
+            lblFechaTermincion.Name = "lblFechaTermincion";
+            lblFechaTermincion.Size = new Size(285, 39);
+            lblFechaTermincion.TabIndex = 9;
+            lblFechaTermincion.Text = "Fecha de Terminacion ";
             // 
-            // label9
+            // lblFechaDescargaEntrega
             // 
-            label9.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(696, 204);
-            label9.Name = "label9";
-            label9.Size = new Size(332, 28);
-            label9.TabIndex = 8;
-            label9.Text = "Fecha descargada de entrega";
+            lblFechaDescargaEntrega.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFechaDescargaEntrega.Location = new Point(696, 204);
+            lblFechaDescargaEntrega.Name = "lblFechaDescargaEntrega";
+            lblFechaDescargaEntrega.Size = new Size(332, 28);
+            lblFechaDescargaEntrega.TabIndex = 8;
+            lblFechaDescargaEntrega.Text = "Fecha descargada de entrega";
             // 
-            // label8
+            // lblFechaIniciacion
             // 
-            label8.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(696, 161);
-            label8.Name = "label8";
-            label8.Size = new Size(201, 25);
-            label8.TabIndex = 7;
-            label8.Text = "Fecha de Iniciacion";
+            lblFechaIniciacion.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFechaIniciacion.Location = new Point(696, 161);
+            lblFechaIniciacion.Name = "lblFechaIniciacion";
+            lblFechaIniciacion.Size = new Size(201, 25);
+            lblFechaIniciacion.TabIndex = 7;
+            lblFechaIniciacion.Text = "Fecha de Iniciacion";
             // 
-            // label7
+            // lblFechaExpedicion
             // 
-            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(696, 121);
-            label7.Name = "label7";
-            label7.Size = new Size(221, 21);
-            label7.TabIndex = 6;
-            label7.Text = "Fecha de Expedicion\r\n";
+            lblFechaExpedicion.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFechaExpedicion.Location = new Point(696, 121);
+            lblFechaExpedicion.Name = "lblFechaExpedicion";
+            lblFechaExpedicion.Size = new Size(221, 21);
+            lblFechaExpedicion.TabIndex = 6;
+            lblFechaExpedicion.Text = "Fecha de Expedicion\r\n";
             // 
-            // label6
+            // lblFechaPedido
             // 
-            label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(696, 80);
-            label6.Name = "label6";
-            label6.Size = new Size(190, 22);
-            label6.TabIndex = 5;
-            label6.Text = "Fecha de pedido";
+            lblFechaPedido.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFechaPedido.Location = new Point(696, 80);
+            lblFechaPedido.Name = "lblFechaPedido";
+            lblFechaPedido.Size = new Size(190, 22);
+            lblFechaPedido.TabIndex = 5;
+            lblFechaPedido.Text = "Fecha de pedido";
             // 
             // label5
             // 
@@ -550,23 +632,6 @@
             btnOperaciones.UseVisualStyleBackColor = true;
             btnOperaciones.Click += btnOperaciones_Click;
             // 
-            // lblManoObrTotal
-            // 
-            lblManoObrTotal.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblManoObrTotal.Location = new Point(696, 387);
-            lblManoObrTotal.Name = "lblManoObrTotal";
-            lblManoObrTotal.Size = new Size(106, 32);
-            lblManoObrTotal.TabIndex = 41;
-            // 
-            // lblCostoPrimo
-            // 
-            lblCostoPrimo.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCostoPrimo.Location = new Point(696, 419);
-            lblCostoPrimo.Name = "lblCostoPrimo";
-            lblCostoPrimo.Size = new Size(106, 32);
-            lblCostoPrimo.TabIndex = 42;
-            lblCostoPrimo.Click += label23_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -579,8 +644,8 @@
             Text = "Form1";
             Load += Form1_Load;
             tabControl1.ResumeLayout(false);
-            tabPage5.ResumeLayout(false);
-            tabPage5.PerformLayout();
+            tpRecibo.ResumeLayout(false);
+            tpRecibo.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -592,17 +657,17 @@
         private Button btnOperaciones;
         private TabPage tabPage3;
         private TabPage tabPage4;
-        private TabPage tabPage5;
+        private TabPage tpRecibo;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
+        private Label lblFechaTermincion;
+        private Label lblFechaDescargaEntrega;
+        private Label lblFechaIniciacion;
+        private Label lblFechaExpedicion;
+        private Label lblFechaPedido;
         private TextBox txtProducto;
         private TextBox txtCliente;
         private DateTimePicker dtpFechaIniciacion;
@@ -613,28 +678,34 @@
         private TextBox txtCantidad;
         private TextBox txtEspesificaciones;
         private DateTimePicker dtpFechaTerminacion;
-        private Label label12;
-        private Label label11;
-        private Label label14;
-        private Label label13;
-        private Label label19;
-        private Label label17;
-        private Label label16;
-        private Label label15;
+        private Label lblSubTitulo;
+        private Label lblTitulo;
+        private Label lblMateriaPrimaDirecta;
+        private Label lblConcepto;
+        private Label lblCostodeProduccion;
+        private Label lblCargosIndirectos;
+        private Label lblCostopri;
+        private Label lblManodeObraDirecta;
         private Label label28;
         private Label lblCostoProduccionTotal;
         private Label lblCargosIndireTotal;
         private Label lblMatPriDirecTotal;
-        private Label label22;
-        private Label label21;
-        private Label label20;
+        private Label lblUnitario;
+        private Label lblTotal;
+        private Label lblCosto;
         private Label lblCostoProduccionUnitario;
         private Label lblCargosIndireUnitario;
-        private Label lblCostoPrimoUnitarioUnitario;
+        private Label lblCostoPrimoUnitario;
         private Label lblManoObraDirecUnitario;
         private Label lblMatPriDirecUnitario;
         private Button btnImprimir;
-        private Label lblCostoPrimo;
+        private Label lblCostoPrimoTotal;
         private Label lblManoObrTotal;
+        private TextBox txtContabilizada;
+        private Label lblContabilizada;
+        private TextBox txtCalculada;
+        private Label lblCalculada;
+        private TextBox txtExpedida;
+        private Label lblExpedida;
     }
 }
