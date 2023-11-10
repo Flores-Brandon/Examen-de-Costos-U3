@@ -540,7 +540,7 @@ namespace unidad_3_costos
                 MessageBox.Show($"Error al guardar la información: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //
+        
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
